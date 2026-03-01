@@ -41,82 +41,220 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero interactable">
-            <div class="hero__bg"></div>
-            <div class="container hero__container">
-                <h1 class="hero__title reveal reveal-left">
-                    We Build <span class="highlight">Futuristic</span><br> Digital Experiences
+        <section class="hero interactable" style="position: relative; overflow: hidden;">
+            <div class="hero__bg"
+                style="position: absolute; top:0; left:0; width:100%; height:100%; background: radial-gradient(circle at 50% 50%, rgba(0, 229, 255, 0.1) 0%, transparent 50%); z-index: -1;">
+            </div>
+            <div class="container hero__container"
+                style="padding-top: var(--space-16); padding-bottom: var(--space-8); text-align: center;">
+                <h1 class="hero__title reveal reveal-left"
+                    style="font-size: clamp(3rem, 6vw, 5rem); margin-bottom: var(--space-4); max-width: 900px; margin-inline: auto;">
+                    We Help Brands Generate <span class="highlight">More Leads</span> With High-Converting Digital
+                    Systems.
                 </h1>
-                <p class="hero__subtitle reveal">
-                    Nexora Digital transforms brands with cutting-edge web design, scalable backend architectures, and
-                    data-driven marketing.
+                <p class="hero__subtitle reveal"
+                    style="font-size: 1.25rem; color: var(--clr-text-muted); max-width: 700px; margin-inline: auto; margin-bottom: var(--space-8); line-height: 1.6;">
+                    We partner with B2B tech companies and innovative startups to design fast, scalable websites and
+                    applications that focus on results—not just aesthetics.
                 </p>
-                <div class="hero__ctas reveal">
-                    <a href="/portfolio.html" class="btn btn--primary">View Our Work</a>
-                    <a href="#services" class="hero__link">Discover Services &rarr;</a>
+                <div class="hero__ctas reveal" style="display: flex; gap: var(--space-4); justify-content: center;">
+                    <a href="/contact.html" class="btn btn--primary" style="font-size: 1.1rem; padding: 16px 32px;">Book
+                        a Free Strategy Call</a>
+                    <a href="/portfolio.html" class="btn btn--outline"
+                        style="font-size: 1.1rem; padding: 16px 32px; background: transparent; border: 1px solid var(--clr-border); color: #fff;">View
+                        Our Work</a>
                 </div>
             </div>
         </section>
 
-        <!-- Metrics Section -->
-        <section class="metrics">
-            <div class="container metrics__container">
+        <!-- Metrics / Trust Signals Section -->
+        <section class="metrics"
+            style="padding-block: var(--space-8); border-top: 1px solid var(--clr-border); border-bottom: 1px solid var(--clr-border); background: var(--clr-bg-panel);">
+            <div class="container metrics__container"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-6); text-align: center;">
                 <div class="metric reveal reveal-left">
-                    <h3 class="metric__number"><span class="counter-val" data-target="150">0</span>+</h3>
-                    <p class="metric__label">Projects Completed</p>
+                    <h3 class="metric__number"
+                        style="font-size: 3rem; color: var(--clr-accent); font-weight: 700; font-family: var(--font-heading);">
+                        <span class="counter-val" data-target="45">0</span>+</h3>
+                    <p class="metric__label"
+                        style="text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; color: var(--clr-text-muted);">
+                        Projects Completed</p>
                 </div>
                 <div class="metric reveal">
-                    <h3 class="metric__number"><span class="counter-val" data-target="99">0</span>%</h3>
-                    <p class="metric__label">Client Satisfaction</p>
-                </div>
-                <div class="metric reveal">
-                    <h3 class="metric__number"><span class="counter-val" data-target="5">0</span>M+</h3>
-                    <p class="metric__label">Revenue Generated</p>
+                    <h3 class="metric__number"
+                        style="font-size: 3rem; color: var(--clr-accent); font-weight: 700; font-family: var(--font-heading);">
+                        <span class="counter-val" data-target="100">0</span>%</h3>
+                    <p class="metric__label"
+                        style="text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; color: var(--clr-text-muted);">
+                        Client Satisfaction</p>
                 </div>
                 <div class="metric reveal reveal-right">
-                    <h3 class="metric__number"><span class="counter-val" data-target="40">0</span>+</h3>
-                    <p class="metric__label">Industry Awards</p>
+                    <h3 class="metric__number"
+                        style="font-size: 3rem; color: var(--clr-accent); font-weight: 700; font-family: var(--font-heading);">
+                        $<span class="counter-val" data-target="12">0</span>M+</h3>
+                    <p class="metric__label"
+                        style="text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; color: var(--clr-text-muted);">
+                        Client Revenue Generated</p>
                 </div>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section id="services" class="services">
+        <!-- Services Section (Deep) -->
+        <section id="services" class="services" style="padding-block: var(--space-16);">
             <div class="container">
-                <div class="section-header reveal">
-                    <h2>Our Services</h2>
-                    <p>Comprehensive digital solutions tailored for growth and scale.</p>
+                <div class="section-header reveal" style="text-align: center; margin-bottom: var(--space-12);">
+                    <h2 style="font-size: clamp(2.5rem, 4vw, 3.5rem); margin-bottom: var(--space-2);">Our Core <span
+                            class="highlight">Systems</span></h2>
+                    <p style="font-size: 1.1rem; color: var(--clr-text-muted); max-width: 600px; margin-inline: auto;">
+                        We don't just build websites; we engineer complete digital funnels tailored for growth.</p>
                 </div>
 
-                <div class="services__grid">
-                    <div class="service-card reveal reveal-left">
-                        <div class="service-card__icon">💻</div>
-                        <h3>Web Development</h3>
-                        <p>Performant, scalable, and secure web applications built with modern stacks like React,
-                            Node.js, and MongoDB.</p>
+                <div class="services__grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-8);">
+
+                    <div class="service-card reveal reveal-left"
+                        style="background: var(--clr-bg-panel); padding: var(--space-6); border-radius: var(--radius-lg); border: 1px solid var(--clr-border); transition: transform 0.3s ease, border-color 0.3s ease;">
+                        <div class="service-card__icon" style="font-size: 2.5rem; margin-bottom: var(--space-4);">🚀
+                        </div>
+                        <h3 style="font-size: 1.8rem; margin-bottom: var(--space-2);">Conversion Web Design</h3>
+                        <p style="font-size: 0.95rem;"><strong>The Problem:</strong> Your traffic isn't converting into
+                            leads. Your current site looks outdated and lacks trust signals.</p>
+                        <p style="margin-block: var(--space-4); color: var(--clr-text-muted); font-size: 0.95rem;">
+                            <strong>Our Solution:</strong> We design fast, intuitive, data-driven interfaces optimized
+                            specifically to drive user action and capture leads.</p>
+                        <ul
+                            style="list-style: none; margin-bottom: var(--space-6); color: var(--clr-text-muted); font-size: 0.9rem;">
+                            <li style="margin-bottom: 8px;">✓ Wireframing & UX Flow</li>
+                            <li style="margin-bottom: 8px;">✓ Mobile-First Development</li>
+                            <li>✓ Conversion Rate Optimization</li>
+                        </ul>
+                        <a href="/contact.html" class="btn btn--outline"
+                            style="width: 100%; text-align: center; display: block; padding: 12px; background: transparent; border: 1px solid var(--clr-border); color: #fff;">Get
+                            A Website Estimate</a>
                     </div>
-                    <div class="service-card reveal">
-                        <div class="service-card__icon">🎨</div>
-                        <h3>UI/UX Design</h3>
-                        <p>Beautiful, intuitive interfaces designed to maximize user engagement and convert visitors
-                            into customers.</p>
+
+                    <div class="service-card reveal"
+                        style="background: var(--clr-bg-panel); padding: var(--space-6); border-radius: var(--radius-lg); border: 1px solid var(--clr-border); transition: transform 0.3s ease, border-color 0.3s ease;">
+                        <div class="service-card__icon" style="font-size: 2.5rem; margin-bottom: var(--space-4);">⚙️
+                        </div>
+                        <h3 style="font-size: 1.8rem; margin-bottom: var(--space-2);">Custom Web Applications</h3>
+                        <p style="font-size: 0.95rem;"><strong>The Problem:</strong> Off-the-shelf software doesn't fit
+                            your unique operational workflows, causing bottlenecks.</p>
+                        <p style="margin-block: var(--space-4); color: var(--clr-text-muted); font-size: 0.95rem;">
+                            <strong>Our Solution:</strong> We engineer scalable, secure, and blazing-fast custom
+                            backends connecting your entire tech stack.</p>
+                        <ul
+                            style="list-style: none; margin-bottom: var(--space-6); color: var(--clr-text-muted); font-size: 0.9rem;">
+                            <li style="margin-bottom: 8px;">✓ API Integrations & Webhooks</li>
+                            <li style="margin-bottom: 8px;">✓ Custom CRM / Dashboards</li>
+                            <li>✓ Cloud Architecture (AWS/Node)</li>
+                        </ul>
+                        <a href="/contact.html" class="btn btn--outline"
+                            style="width: 100%; text-align: center; display: block; padding: 12px; background: transparent; border: 1px solid var(--clr-border); color: #fff;">Discuss
+                            Your App</a>
                     </div>
-                    <div class="service-card reveal reveal-right">
-                        <div class="service-card__icon">🚀</div>
-                        <h3>SEO & Marketing</h3>
-                        <p>Data-driven strategies to increase your organic traffic, rank higher on Google, and boost
-                            your ROI.</p>
+
+                    <div class="service-card reveal reveal-right"
+                        style="background: var(--clr-bg-panel); padding: var(--space-6); border-radius: var(--radius-lg); border: 1px solid var(--clr-border); transition: transform 0.3s ease, border-color 0.3s ease;">
+                        <div class="service-card__icon" style="font-size: 2.5rem; margin-bottom: var(--space-4);">📈
+                        </div>
+                        <h3 style="font-size: 1.8rem; margin-bottom: var(--space-2);">Technical SEO</h3>
+                        <p style="font-size: 0.95rem;"><strong>The Problem:</strong> Your beautiful website is invisible
+                            to Google, losing high-intent organic traffic to competitors.</p>
+                        <p style="margin-block: var(--space-4); color: var(--clr-text-muted); font-size: 0.95rem;">
+                            <strong>Our Solution:</strong> We implement deep technical optimization, fast loading
+                            speeds, and structured data schemas to dominate search.</p>
+                        <ul
+                            style="list-style: none; margin-bottom: var(--space-6); color: var(--clr-text-muted); font-size: 0.9rem;">
+                            <li style="margin-bottom: 8px;">✓ Automated XML Sitemaps</li>
+                            <li style="margin-bottom: 8px;">✓ Core Web Vitals Optimization</li>
+                            <li>✓ Schema.org JSON-LD Markup</li>
+                        </ul>
+                        <a href="/contact.html" class="btn btn--outline"
+                            style="width: 100%; text-align: center; display: block; padding: 12px; background: transparent; border: 1px solid var(--clr-border); color: #fff;">Audit
+                            My SEO</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process"
+            style="padding-block: var(--space-16); background: var(--clr-bg-panel); border-top: 1px solid var(--clr-border);">
+            <div class="container">
+                <div class="section-header reveal" style="text-align: center; margin-bottom: var(--space-12);">
+                    <h2 style="font-size: clamp(2.5rem, 4vw, 3.5rem); margin-bottom: var(--space-2);">How We <span
+                            class="highlight">Work</span></h2>
+                    <p style="font-size: 1.1rem; color: var(--clr-text-muted); max-width: 600px; margin-inline: auto;">A
+                        transparent, 3-step proven process to guarantee delivery and quality.</p>
+                </div>
+
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-8);">
+                    <div class="reveal reveal-left"
+                        style="text-align: center; padding: var(--space-6); border: 1px solid var(--clr-border); border-radius: var(--radius-lg); background: rgba(0,0,0,0.2);">
+                        <div
+                            style="width: 60px; height: 60px; background: rgba(0,229,255,0.1); color: var(--clr-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto var(--space-4);">
+                            1</div>
+                        <h3 style="font-size: 1.5rem;">Discovery & Strategy</h3>
+                        <p style="color: var(--clr-text-muted); margin-top: var(--space-2); line-height: 1.6;">We
+                            analyze your goals, target audience, and bottlenecks to build a roadmap.</p>
+                    </div>
+                    <div class="reveal"
+                        style="text-align: center; padding: var(--space-6); border: 1px solid var(--clr-border); border-radius: var(--radius-lg); background: rgba(0,0,0,0.2);">
+                        <div
+                            style="width: 60px; height: 60px; background: rgba(0,229,255,0.1); color: var(--clr-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto var(--space-4);">
+                            2</div>
+                        <h3 style="font-size: 1.5rem;">Design & Engineering</h3>
+                        <p style="color: var(--clr-text-muted); margin-top: var(--space-2); line-height: 1.6;">We
+                            rapidly build high-fidelity wireframes and engineer the final product.</p>
+                    </div>
+                    <div class="reveal reveal-right"
+                        style="text-align: center; padding: var(--space-6); border: 1px solid var(--clr-border); border-radius: var(--radius-lg); background: rgba(0,0,0,0.2);">
+                        <div
+                            style="width: 60px; height: 60px; background: rgba(0,229,255,0.1); color: var(--clr-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto var(--space-4);">
+                            3</div>
+                        <h3 style="font-size: 1.5rem;">Launch & Scale</h3>
+                        <p style="color: var(--clr-text-muted); margin-top: var(--space-2); line-height: 1.6;">We deploy
+                            your project securely and provide ongoing support and optimization.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Signals (Testimonial) -->
+        <section class="testimonials" style="padding-block: var(--space-16); border-top: 1px solid var(--clr-border);">
+            <div class="container text-center reveal">
+                <p
+                    style="font-size: clamp(1.2rem, 3vw, 1.8rem); font-style: italic; max-width: 800px; margin-inline: auto; line-height: 1.6; color: #fff;">
+                    "Nexora completely transformed our digital funnel. Since launching the new platform, our inbound
+                    lead generation has increased by over 120%."</p>
+                <div
+                    style="margin-top: var(--space-6); display: flex; align-items: center; justify-content: center; gap: var(--space-4);">
+                    <div
+                        style="width: 50px; height: 50px; border-radius: 50%; background: var(--clr-accent); display: flex; align-items: center; justify-content: center; color: #000; font-weight: bold; font-size: 1.2rem;">
+                        JD</div>
+                    <div style="text-align: left;">
+                        <h4 style="margin: 0; font-size: 1.1rem; color: #fff;">John Doe</h4>
+                        <p style="margin: 0; font-size: 0.9rem; color: var(--clr-text-muted);">CEO, FinFlow Corp</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- CTA Section -->
-        <section class="home-cta">
-            <div class="container home-cta__container reveal">
-                <h2>Ready to Start Your Project?</h2>
-                <p>Let's build something extraordinary together.</p>
-                <a href="/contact.html" class="btn btn--primary">Get in Touch</a>
+        <section class="home-cta"
+            style="padding-block: var(--space-16); background: linear-gradient(to bottom, transparent, rgba(0, 229, 255, 0.05)); border-top: 1px solid var(--clr-border);">
+            <div class="container home-cta__container reveal text-center">
+                <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: var(--space-4);">Ready to Scale Your
+                    Revenue?</h2>
+                <p
+                    style="font-size: 1.2rem; color: var(--clr-text-muted); max-width: 600px; margin-inline: auto; margin-bottom: var(--space-8);">
+                    Stop losing leads to a slow, outdated website. Book a free consultation and let's map out your
+                    growth strategy.</p>
+                <a href="/contact.html" class="btn btn--primary" style="font-size: 1.1rem; padding: 16px 32px;">Book a
+                    Free Strategy Call</a>
             </div>
         </section>
     </main>
