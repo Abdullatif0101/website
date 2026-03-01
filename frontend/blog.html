@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Nexora Digital Insights</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body class="dark-theme">
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-follower"></div>
+
+    <header class="header">
+        <div class="header__container">
+            <a href="/" class="header__logo">NEXORA<span>.</span></a>
+            <nav class="header__nav">
+                <a href="/#services" class="header__link">Services</a>
+                <a href="/portfolio.html" class="header__link">Our Work</a>
+                <a href="/blog.html" class="header__link">Insights</a>
+                <a href="/contact.html" class="header__btn btn btn--primary">Get Started</a>
+            </nav>
+            <button class="header__mobile-toggle" aria-label="Toggle menu">
+                <span class="header__hamburger"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header interactable">
+            <div class="container">
+                <h1 class="reveal reveal-left">Industry <span class="highlight">Insights</span></h1>
+                <p class="reveal">Stay ahead of the curve with our latest articles on tech, design, and marketing.</p>
+
+                <div class="blog-filters reveal">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search articles..." class="search-input">
+                        <button class="search-btn">🔍</button>
+                    </div>
+                    <div class="category-pills">
+                        <button class="category-pill active">All</button>
+                        <button class="category-pill">Engineering</button>
+                        <button class="category-pill">Design</button>
+                        <button class="category-pill">Marketing</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-list">
+            <div class="container blog-list__container">
+                <!-- Featured Article -->
+                <article class="blog-card blog-card--featured reveal">
+                    <div class="blog-card__image bg-gradient-1"></div>
+                    <div class="blog-card__content">
+                        <span class="blog-tag">Engineering</span>
+                        <h2><a href="/blog-post.html">How to Scale Your Node.js Backend for Millions of Users</a></h2>
+                        <p>Learn the architectural patterns and scaling strategies we use to handle massive traffic
+                            spikes without breaking a sweat.</p>
+                        <div class="blog-meta">
+                            <span>Mar 14, 2026</span> • <span>8 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Regular Articles -->
+                <article class="blog-card reveal reveal-left">
+                    <div class="blog-card__image bg-gradient-2"></div>
+                    <div class="blog-card__content">
+                        <span class="blog-tag">Design</span>
+                        <h3><a href="/blog-post.html">The Future of Dark Mode in UI Design</a></h3>
+                        <p>Exploring the psychological and aesthetic benefits of deep, immersive dark theme interfaces.
+                        </p>
+                        <div class="blog-meta">
+                            <span>Mar 10, 2026</span> • <span>5 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card reveal">
+                    <div class="blog-card__image bg-gradient-3"></div>
+                    <div class="blog-card__content">
+                        <span class="blog-tag">Marketing</span>
+                        <h3><a href="/blog-post.html">Mastering Organic SEO in 2026</a></h3>
+                        <p>AI generated content is everywhere. Here is how your brand can still stand out organically.
+                        </p>
+                        <div class="blog-meta">
+                            <span>Mar 05, 2026</span> • <span>6 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card reveal reveal-right">
+                    <div class="blog-card__image bg-gradient-4"></div>
+                    <div class="blog-card__content">
+                        <span class="blog-tag">Engineering</span>
+                        <h3><a href="/blog-post.html">Why We Chose MongoDB Over PostgreSQL</a></h3>
+                        <p>A deep dive into the flexibility of document databases vs relational structures for rapid
+                            prototyping.</p>
+                        <div class="blog-meta">
+                            <span>Feb 28, 2026</span> • <span>10 min read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Pagination -->
+            <div class="container pagination reveal">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">Next &rarr;</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p>&copy; 2026 Nexora Digital. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+
+</html>

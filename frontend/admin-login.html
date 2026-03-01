@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | Nexora Digital</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body class="dark-theme admin-body">
+
+    <div class="login-container">
+        <div class="login-box">
+            <a href="/" class="header__logo"
+                style="display: block; text-align: center; margin-bottom: var(--space-6);">NEXORA<span
+                    style="color:var(--clr-accent);">.</span> ADMIN</a>
+
+            <div id="login-alert" class="form-alert error" style="display: none;">Invalid credentials.</div>
+
+            <form id="admin-login-form">
+                <div class="form-group">
+                    <label for="email">Admin Email</label>
+                    <input type="email" id="email" required placeholder="admin@nexoradigital.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="••••••••">
+                </div>
+
+                <button type="submit" class="btn btn--primary"
+                    style="width: 100%; justify-content: center; margin-top: var(--space-4);">Access Dashboard</button>
+            </form>
+            <p style="text-align: center; margin-top: var(--space-4); font-size: 0.9rem; color: var(--clr-text-muted);">
+                <a href="/">← Back to Website</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Mock Login Logic
+        document.getElementById('admin-login-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            // In a real app, send fetch POST to /api/v1/auth/login
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Simple mock logic
+            if (email && password) {
+                // Set fake token
+                localStorage.setItem('adminToken', 'mock_jwt_token');
+                window.location.href = '/admin.html';
+            } else {
+                const alert = document.getElementById('login-alert');
+                alert.style.display = 'block';
+                alert.textContent = 'Please enter valid credentials';
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+/* 
+    Nexora Digital - Admin Dashboard Styles
+*/
+
+.admin-body {
+    background-color: #050505;
+    /* Slightly darker than frontend */
+}
+
+/* --- Login Page --- */
+.login-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-4);
+}
+
+.login-box {
+    background: var(--clr-bg-panel);
+    border: 1px solid var(--clr-border);
+    padding: var(--space-8);
+    border-radius: var(--radius-lg);
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.login-box .form-group input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--clr-border);
+    padding: var(--space-3);
+    border-radius: var(--radius-sm);
+    color: var(--clr-text-main);
+    transition: all var(--transition-fast);
+}
+
+.login-box .form-group input:focus {
+    outline: none;
+    border-color: var(--clr-accent);
+}
+
+/* --- Admin Layout --- */
+.admin-layout {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar */
+.admin-sidebar {
+    width: 250px;
+    background: var(--clr-bg-panel);
+    border-right: 1px solid var(--clr-border);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.admin-logo {
+    padding: var(--space-4);
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.admin-nav {
+    flex: 1;
+    padding: var(--space-4) 0;
+    overflow-y: auto;
+}
+
+.admin-bottom-nav {
+    padding: var(--space-4) 0;
+    border-top: 1px solid var(--clr-border);
+}
+
+.admin-nav-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    color: var(--clr-text-muted);
+    font-weight: 500;
+    text-align: left;
+    transition: all var(--transition-fast);
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.admin-nav-link:hover,
+.admin-nav-link.active {
+    background: rgba(0, 229, 255, 0.05);
+    color: var(--clr-accent);
+    border-right: 3px solid var(--clr-accent);
+}
+
+.text-danger {
+    color: #ff4444;
+}
+
+.text-danger:hover {
+    background: rgba(255, 68, 68, 0.1);
+    color: #ff4444;
+    border-right: 3px solid #ff4444;
+}
+
+/* Main Area */
+.admin-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.admin-header {
+    height: 70px;
+    background: var(--clr-bg-panel);
+    border-bottom: 1px solid var(--clr-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--space-6);
+}
+
+.admin-user {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--clr-accent);
+    color: var(--clr-bg-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+/* Content Area */
+.admin-content {
+    flex: 1;
+    padding: var(--space-6);
+    overflow-y: auto;
+}
+
+.admin-view {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.admin-view.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dashboard Metrics */
+.dashboard-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-4);
+}
+
+.metric-card {
+    background: var(--clr-bg-panel);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+}
+
+.metric-card h4 {
+    color: var(--clr-text-muted);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: var(--space-2);
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--clr-text-main);
+}
+
+.metric-trend {
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-top: var(--space-2);
+}
+
+.metric-trend.positive {
+    color: #00ff88;
+}
+
+.metric-trend.negative {
+    color: #ff4444;
+}
+
+/* View Utilities */
+.view-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-6);
+}
+
+.btn-sm {
+    padding: var(--space-1) var(--space-3);
+    font-size: 0.9rem;
+    border-radius: var(--radius-md);
+}

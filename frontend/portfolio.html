@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work | Nexora Digital Portfolio</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body class="dark-theme">
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-follower"></div>
+
+    <header class="header">
+        <div class="header__container">
+            <a href="/" class="header__logo">NEXORA<span>.</span></a>
+            <nav class="header__nav">
+                <a href="/#services" class="header__link">Services</a>
+                <a href="/portfolio.html" class="header__link active">Our Work</a>
+                <a href="/blog.html" class="header__link">Insights</a>
+                <a href="/contact.html" class="header__btn btn btn--primary">Get Started</a>
+            </nav>
+            <button class="header__mobile-toggle" aria-label="Toggle menu">
+                <span class="header__hamburger"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Reusing page-header styles from blog -->
+        <section class="page-header"
+            style="padding-top: var(--space-16); padding-bottom: var(--space-6); text-align: center;">
+            <div class="container">
+                <h1 class="reveal reveal-left">Our <span class="highlight">Portfolio</span></h1>
+                <p class="reveal"
+                    style="font-size: 1.2rem; color: var(--clr-text-muted); max-width: 600px; margin-inline: auto;">
+                    Showcasing digital transformations and award-winning experiences built for forward-thinking brands.
+                </p>
+
+                <div class="portfolio-filters reveal"
+                    style="margin-top: var(--space-8); display: flex; justify-content: center; gap: var(--space-2); flex-wrap: wrap;">
+                    <!-- Reusing category-pill concepts -->
+                    <button class="category-pill active" data-filter="all">All Projects</button>
+                    <button class="category-pill" data-filter="web">Web Design</button>
+                    <button class="category-pill" data-filter="app">SaaS / Web Apps</button>
+                    <button class="category-pill" data-filter="branding">Branding</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-grid">
+            <div class="container portfolio-grid__container">
+                <!-- Project 1 -->
+                <a href="/portfolio-project.html" class="project-card reveal reveal-left" data-category="web">
+                    <div class="project-card__image bg-gradient-1"></div>
+                    <div class="project-card__overlay">
+                        <div class="project-card__content">
+                            <h3>FinFlow Fintech Platform</h3>
+                            <p>Web Design & Development</p>
+                            <span class="btn btn--primary project-card__btn">View Case Study</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 2 -->
+                <a href="/portfolio-project.html" class="project-card reveal" data-category="app">
+                    <div class="project-card__image bg-gradient-2"></div>
+                    <div class="project-card__overlay">
+                        <div class="project-card__content">
+                            <h3>HealthSync Dashboard</h3>
+                            <p>SaaS / Web Apps</p>
+                            <span class="btn btn--primary project-card__btn">View Case Study</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 3 -->
+                <a href="/portfolio-project.html" class="project-card reveal reveal-right" data-category="web">
+                    <div class="project-card__image bg-gradient-3"></div>
+                    <div class="project-card__overlay">
+                        <div class="project-card__content">
+                            <h3>EcoStore E-commerce</h3>
+                            <p>Web Design & SEO</p>
+                            <span class="btn btn--primary project-card__btn">View Case Study</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 4 -->
+                <a href="/portfolio-project.html" class="project-card reveal reveal-left" data-category="branding">
+                    <div class="project-card__image bg-gradient-4"></div>
+                    <div class="project-card__overlay">
+                        <div class="project-card__content">
+                            <h3>Nova Dynamics Identity</h3>
+                            <p>Branding & Strategy</p>
+                            <span class="btn btn--primary project-card__btn">View Case Study</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 5 -->
+                <a href="/portfolio-project.html" class="project-card reveal" data-category="app">
+                    <div class="project-card__image bg-gradient-1"
+                        style="background: linear-gradient(135deg, #1A2980, #26D0CE);"></div>
+                    <div class="project-card__overlay">
+                        <div class="project-card__content">
+                            <h3>Aura AI Analytics</h3>
+                            <p>SaaS / Web Apps</p>
+                            <span class="btn btn--primary project-card__btn">View Case Study</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 6 -->
+                <a href="/portfolio-project.html" class="project-card reveal reveal-right" data-category="web">
+                    <div class="project-card__image bg-gradient-2"
+                        style="background: linear-gradient(45deg, #FF416C, #FF4B2B);"></div>
+                    <div class="project-card__overlay">
+                        <div class="project-card__content">
+                            <h3>Velocity Motors</h3>
+                            <p>Web Design</p>
+                            <span class="btn btn--primary project-card__btn">View Case Study</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="home-cta" style="margin-top: var(--space-8);">
+            <div class="container home-cta__container reveal">
+                <h2>Want your project here?</h2>
+                <p>Let's create an award-winning experience together.</p>
+                <a href="/contact.html" class="btn btn--primary">Start Your Project</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p>&copy; 2026 Nexora Digital. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script>
+        // Simple mock category filtering for portfolio
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.portfolio-filters .category-pill');
+            const projects = document.querySelectorAll('.project-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active class
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    // Filter Logic
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    projects.forEach(project => {
+                        if (filterValue === 'all' || project.getAttribute('data-category') === filterValue) {
+                            project.style.display = 'block';
+                            // small trick to re-trigger css animations if desired, but simple display works.
+                            setTimeout(() => { project.style.opacity = '1'; project.style.transform = 'scale(1)'; }, 50);
+                        } else {
+                            project.style.opacity = '0';
+                            project.style.transform = 'scale(0.9)';
+                            setTimeout(() => { project.style.display = 'none'; }, 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+/* 
+    Nexora Digital - Contact Page Styles
+*/
+
+.contact-section {
+    padding-bottom: var(--space-12);
+}
+
+.contact-section__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+}
+
+@media (min-width: 900px) {
+    .contact-section__container {
+        grid-template-columns: 1fr 2fr;
+        gap: var(--space-12);
+    }
+}
+
+/* --- Contact Info Panel --- */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.info-block h3 {
+    color: var(--clr-accent);
+    margin-bottom: var(--space-2);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-block p {
+    color: var(--clr-text-main);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--space-4);
+    margin-top: var(--space-2);
+}
+
+.social-links a {
+    color: var(--clr-text-muted);
+    transition: color var(--transition-fast);
+}
+
+.social-links a:hover {
+    color: var(--clr-accent);
+}
+
+/* --- Contact Form --- */
+.contact-form-wrapper {
+    background: var(--clr-bg-panel);
+    padding: var(--space-6) var(--space-4);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--clr-border);
+}
+
+@media (min-width: 768px) {
+    .contact-form-wrapper {
+        padding: var(--space-8);
+    }
+}
+
+.form-group {
+    margin-bottom: var(--space-4);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--space-2);
+    font-size: 0.95rem;
+    color: var(--clr-text-muted);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--clr-border);
+    padding: var(--space-3);
+    border-radius: var(--radius-sm);
+    color: var(--clr-text-main);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: all var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--clr-accent);
+    background: rgba(0, 229, 255, 0.05);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Mock reCAPTCHA styling */
+.recaptcha-mock {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: #f9f9f9;
+    padding: var(--space-3);
+    border-radius: 3px;
+    border: 1px solid #d3d3d3;
+    width: fit-content;
+    color: #333;
+}
+
+.recaptcha-mock label {
+    margin-bottom: 0;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Submit Button & Loader */
+.submit-btn {
+    width: 100%;
+    margin-top: var(--space-2);
+    display: flex;
+    justify-content: center;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--clr-accent);
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Alerts */
+.form-alert {
+    padding: var(--space-3);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-4);
+    display: none;
+}
+
+.form-alert.success {
+    display: block;
+    background: rgba(0, 255, 136, 0.1);
+    color: #00ff88;
+    border: 1px solid #00ff88;
+}
+
+.form-alert.error {
+    display: block;
+    background: rgba(255, 68, 68, 0.1);
+    color: #ff4444;
+    border: 1px solid #ff4444;
+}

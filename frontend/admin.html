@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Nexora Digital Admin</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body class="dark-theme admin-body">
+
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <a href="/admin.html" class="header__logo">NEXORA<span style="color:var(--clr-accent);">.</span></a>
+            </div>
+
+            <nav class="admin-nav">
+                <button class="admin-nav-link active" data-view="overview">📊 Overview</button>
+                <button class="admin-nav-link" data-view="leads">📥 Leads / Contacts</button>
+                <button class="admin-nav-link" data-view="blog">📝 Blog Posts</button>
+                <button class="admin-nav-link" data-view="portfolio">🎨 Portfolio</button>
+                <button class="admin-nav-link" data-view="newsletter">📧 Newsletter</button>
+            </nav>
+
+            <div class="admin-bottom-nav">
+                <a href="/" target="_blank" class="admin-nav-link">🌐 View Live Site</a>
+                <button class="admin-nav-link text-danger" id="logout-btn">🚪 Logout</button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="admin-main">
+            <!-- Header -->
+            <header class="admin-header">
+                <h2 id="current-view-title">Dashboard Overview</h2>
+                <div class="admin-user">
+                    <span>Admin</span>
+                    <div class="avatar">A</div>
+                </div>
+            </header>
+
+            <div class="admin-content">
+                <!-- Overview View -->
+                <div id="view-overview" class="admin-view active">
+                    <div class="dashboard-metrics">
+                        <div class="metric-card">
+                            <h4>Total Leads</h4>
+                            <div class="metric-value">124</div>
+                            <span class="metric-trend positive">+12% this month</span>
+                        </div>
+                        <div class="metric-card">
+                            <h4>Blog Posts</h4>
+                            <div class="metric-value">32</div>
+                        </div>
+                        <div class="metric-card">
+                            <h4>Portfolio Items</h4>
+                            <div class="metric-value">18</div>
+                        </div>
+                        <div class="metric-card">
+                            <h4>Subscribers</h4>
+                            <div class="metric-value">840</div>
+                            <span class="metric-trend positive">+54 this week</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leads View -->
+                <div id="view-leads" class="admin-view">
+                    <div class="view-header">
+                        <h3>Recent Leads</h3>
+                        <button class="btn btn--primary btn-sm">Export CSV</button>
+                    </div>
+                    <div style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; text-align: left; color: #fff;">
+                            <thead>
+                                <tr style="border-bottom: 1px solid var(--clr-border);">
+                                    <th style="padding: 12px; color: var(--clr-text-muted);">Date</th>
+                                    <th style="padding: 12px; color: var(--clr-text-muted);">Name</th>
+                                    <th style="padding: 12px; color: var(--clr-text-muted);">Service</th>
+                                    <th style="padding: 12px; color: var(--clr-text-muted);">Status</th>
+                                    <th style="padding: 12px; color: var(--clr-text-muted);">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid var(--clr-border);">
+                                    <td style="padding: 12px;">Mar 14, 2026</td>
+                                    <td style="padding: 12px;">John Doe</td>
+                                    <td style="padding: 12px;">Web Design</td>
+                                    <td style="padding: 12px;"><span style="color: #00E5FF;">New</span></td>
+                                    <td style="padding: 12px;"><button
+                                            style="color: var(--clr-accent); margin-right: 8px;">View</button> <button
+                                            style="color: #ff4444;">Delete</button></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--clr-border);">
+                                    <td style="padding: 12px;">Mar 12, 2026</td>
+                                    <td style="padding: 12px;">Sarah Smith</td>
+                                    <td style="padding: 12px;">SEO & Marketing</td>
+                                    <td style="padding: 12px;"><span style="color: #00ff88;">Contacted</span></td>
+                                    <td style="padding: 12px;"><button
+                                            style="color: var(--clr-accent); margin-right: 8px;">View</button> <button
+                                            style="color: #ff4444;">Delete</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Blog View -->
+                <div id="view-blog" class="admin-view">
+                    <div class="view-header">
+                        <h3>Manage Blog Posts</h3>
+                        <button class="btn btn--primary btn-sm">+ New Post</button>
+                    </div>
+                    <div style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; text-align: left; color: #fff;">
+                            <thead>
+                                <tr style="border-bottom: 1px solid var(--clr-border);">
+                                    <th style="padding: 12px; color: var(--clr-text-muted);">Title</th>
+                                    <th style="padding: 12px; color: var(--clr-text-muted);">Category</th>
+                                    <th style="padding: 12px; color: var(--clr-text-muted);">Status</th>
+                                    <th style="padding: 12px; color: var(--clr-text-muted);">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid var(--clr-border);">
+                                    <td style="padding: 12px;">How to Scale Your Node...</td>
+                                    <td style="padding: 12px;">Engineering</td>
+                                    <td style="padding: 12px;"><span style="color: #00ff88;">Published</span></td>
+                                    <td style="padding: 12px;"><button
+                                            style="color: var(--clr-accent); margin-right: 8px;">Edit</button> <button
+                                            style="color: #ff4444;">Delete</button></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--clr-border);">
+                                    <td style="padding: 12px;">The Future of Dark Mode...</td>
+                                    <td style="padding: 12px;">Design</td>
+                                    <td style="padding: 12px;"><span style="color: #ffaa00;">Draft</span></td>
+                                    <td style="padding: 12px;"><button
+                                            style="color: var(--clr-accent); margin-right: 8px;">Edit</button> <button
+                                            style="color: #ff4444;">Delete</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Portfolio View -->
+                <div id="view-portfolio" class="admin-view">
+                    <div class="view-header">
+                        <h3>Manage Portfolio</h3>
+                        <button class="btn btn--primary btn-sm">+ New Project</button>
+                    </div>
+                    <div style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; text-align: left; color: #fff;">
+                            <thead>
+                                <tr style="border-bottom: 1px solid var(--clr-border);">
+                                    <th style="padding: 12px; color: var(--clr-text-muted);">Project Name</th>
+                                    <th style="padding: 12px; color: var(--clr-text-muted);">Category</th>
+                                    <th style="padding: 12px; color: var(--clr-text-muted);">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid var(--clr-border);">
+                                    <td style="padding: 12px;">FinFlow Fintech Platform</td>
+                                    <td style="padding: 12px;">Web Design</td>
+                                    <td style="padding: 12px;"><button
+                                            style="color: var(--clr-accent); margin-right: 8px;">Edit</button> <button
+                                            style="color: #ff4444;">Delete</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Newsletter View Placeholder -->
+                <div id="view-newsletter" class="admin-view">
+                    <div class="view-header">
+                        <h3>Newsletter Subscribers</h3>
+                        <button class="btn btn--primary btn-sm">Export CSV (Mailchimp Sync)</button>
+                    </div>
+                    <p style="color: var(--clr-text-muted);">Subscriber list will render here.</p>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Scale Your Node.js Backend | Nexora Digital</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body class="dark-theme">
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-follower"></div>
+
+    <header class="header">
+        <div class="header__container">
+            <a href="/" class="header__logo">NEXORA<span>.</span></a>
+            <nav class="header__nav">
+                <a href="/#services" class="header__link">Services</a>
+                <a href="/portfolio.html" class="header__link">Our Work</a>
+                <a href="/blog.html" class="header__link">Insights</a>
+                <a href="/contact.html" class="header__btn btn btn--primary">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article class="single-post">
+            <div class="container reveal">
+                <div class="single-post__header">
+                    <span class="blog-tag">Engineering</span>
+                    <h1>How to Scale Your Node.js Backend for Millions of Users</h1>
+                    <div class="blog-meta" style="justify-content: center; display: flex; gap: 1rem;">
+                        <span>By Alex Turner</span>
+                        <span>Mar 14, 2026</span>
+                        <span>8 min read</span>
+                    </div>
+                </div>
+
+                <div class="single-post__hero-image bg-gradient-1"></div>
+
+                <div class="single-post__content">
+                    <p>Scaling a backend architecture to handle millions of requests gracefully is a challenge every
+                        successful SaaS product eventually faces. At Nexora Digital, we've navigated this journey
+                        multiple times. In this guide, we break down our approach to scaling Node.js applications.</p>
+
+                    <h2>1. Master the Event Loop</h2>
+                    <p>Node.js is inherently single-threaded. To maximize its potential, you must understand the Event
+                        Loop and avoid blocking it with synchronous operations. Offload heavy computation to Worker
+                        Threads or dedicated microservices.</p>
+
+                    <h2>2. Horizontal Scaling with PM2 & Docker</h2>
+                    <p>Deploying a single instance of your Node app on a server limits it to one CPU core. Using process
+                        managers like PM2 in cluster mode or orchestrating containers with Docker/Kubernetes allows you
+                        to spawn multiple instances matching your CPU count.</p>
+
+                    <h2>3. Database Optimization & Caching</h2>
+                    <p>Your database is usually the first bottleneck. Strategies include:</p>
+                    <ul>
+                        <li>Implementing Redis for aggressive caching of frequently accessed, rarely mutated data.</li>
+                        <li>Database indexing on standard query paths.</li>
+                        <li>Read replicas to offload GET requests from the primary write database.</li>
+                    </ul>
+
+                    <blockquote>
+                        "Premature optimization is the root of all evil, but architectural foresight is the seed of
+                        scale."
+                    </blockquote>
+
+                    <h2>Conclusion</h2>
+                    <p>Scaling is an iterative process. By implementing caching, horizontal scaling, and optimizing the
+                        event loop, your Node.js application can serve millions with ease. If you need a partner to
+                        audit or build your scalable architecture, <a href="/contact.html"
+                            style="color:var(--clr-accent); text-decoration:underline;">contact our team today</a>.</p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p>&copy; 2026 Nexora Digital. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+
+</html>

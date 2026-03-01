@@ -1,0 +1,170 @@
+/* 
+    Nexora Digital - Home Page Styles
+*/
+
+/* --- Hero Section --- */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: var(--space-12);
+    overflow: hidden;
+}
+
+.hero__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(0, 229, 255, 0.15), transparent 40%),
+        radial-gradient(circle at bottom left, rgba(0, 229, 255, 0.05), transparent 40%);
+    z-index: -1;
+}
+
+.hero__container {
+    max-width: 900px;
+    margin-inline: 0;
+    /* Align left */
+}
+
+.hero__title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    margin-bottom: var(--space-4);
+}
+
+.hero__title .highlight {
+    color: var(--clr-accent);
+    text-shadow: 0 0 20px var(--clr-accent-glow);
+}
+
+.hero__subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    color: var(--clr-text-muted);
+    margin-bottom: var(--space-6);
+    max-width: 700px;
+}
+
+.hero__ctas {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+}
+
+.hero__link {
+    font-weight: 600;
+    color: var(--clr-text-main);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.hero__link:hover {
+    color: var(--clr-accent);
+}
+
+/* --- Metrics Section --- */
+.metrics {
+    padding-block: var(--space-8);
+    background: var(--clr-bg-panel);
+    border-top: 1px solid var(--clr-border);
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.metrics__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-6);
+    text-align: center;
+}
+
+.metric__number {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--clr-accent);
+    margin-bottom: var(--space-1);
+}
+
+.metric__label {
+    color: var(--clr-text-muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+/* --- Services Section --- */
+.section-header {
+    margin-bottom: var(--space-12);
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: var(--space-2);
+}
+
+.section-header p {
+    color: var(--clr-text-muted);
+    font-size: 1.2rem;
+}
+
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-6);
+}
+
+.service-card {
+    background: var(--clr-bg-panel);
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--clr-border);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-color: var(--clr-accent-glow);
+}
+
+.service-card__icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-4);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-2);
+}
+
+.service-card p {
+    color: var(--clr-text-muted);
+}
+
+/* --- Home CTA Section --- */
+.home-cta {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.home-cta__container {
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.1) 0%, transparent 100%);
+    padding: var(--space-12) var(--space-4);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--clr-accent-glow);
+}
+
+.home-cta h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: var(--space-2);
+}
+
+.home-cta p {
+    color: var(--clr-text-muted);
+    font-size: 1.2rem;
+    margin-bottom: var(--space-6);
+}
